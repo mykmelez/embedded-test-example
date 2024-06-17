@@ -21,18 +21,18 @@ defmt-rtt = { version = "0.4.1", optional = true }
 embassy-executor = { default-features = false, version = "0.5.0", features = ["executor-thread", "arch-riscv32"], optional = true }
 
 # Esp32 related dependencies for main.rs. Note: embedded-test comes with its own panic handler and logging sink.
-esp-hal = { version = "0.17.0", features = ["esp32c6"] }
+esp-hal = { version = "0.17.0", features = ["esp32s3"] }
 esp-backtrace = { version = "0.11.0", features = [
-    "esp32c6",
+    "esp32s3",
     "exception-handler",
     "panic-handler",
     "println",
 ] }
-esp-println = { version = "0.9.0", default-features = false, features = ["esp32c6", "log", "jtag-serial", "colors"] }
+esp-println = { version = "0.9.0", default-features = false, features = ["esp32s3", "log", "jtag-serial", "colors"] }
 
 
 [dev-dependencies]
-embedded-test = { version = "0.4.0" }
+embedded-test = { version = "0.4.0", features = ["xtensa-semihosting"] }
 
 [features]
 default = ["log"]
