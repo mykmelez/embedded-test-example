@@ -17,4 +17,5 @@ rustflags = [
 
 [unstable]
 build-std = ["std", "panic_abort"]
-build-std-features = ["panic_immediate_abort"]
+# Commented out so we run all tests even if some of them fail.
+# build-std-features = ["panic_immediate_abort"]
