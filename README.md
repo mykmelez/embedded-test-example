@@ -22,7 +22,7 @@ cargo install probe-rs-tools --git https://github.com/probe-rs/probe-rs --rev a6
 In the terminal window where you're running the tests, source export-esp.sh for your current toolchain:
 
 ```sh
-. $HOME/.rustup/toolchains/esp-1.77.0.0/share/export-esp.sh
+. $HOME/export-esp.sh
 ```
 
 (You must do this in each terminal window where you intend to run tests.)
